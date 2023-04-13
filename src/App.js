@@ -1,12 +1,28 @@
-import logo from './logo.svg';
-import './App.scss';
+/* rafce */
+import React from 'react'
+import './App.scss'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import AllRoutesProject from './config/routes'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Prueba proyecto</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {AllRoutesProject.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            element={
+              <route.layout>
+                <route.component />
+              </route.layout>
+            }
+          />
+        ))}
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
-export default App;
+export default App
+
