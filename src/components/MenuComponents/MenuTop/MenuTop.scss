@@ -2,26 +2,37 @@
 
 .menu-top{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    &.menu-top-collapsed{
+        padding: 0;
+    }
+    &__left{
+        display: flex;
+        align-items: center;
+        height: 50px;
+        &__logo{
+            width: 70px;
+            padding: 0 10px;
+        }
+    }
     button{
-        color: $primary-color;
+        margin-left: 5px;
+        cursor: pointer;
+        font-size: 20px;
         &:hover{
-            color: $primary-color-hover;
+            color: darkblue;
         }
         &:focus,
         &:active{
-            color:  blue;
+            color:  darkblue;
         }
     }
-    &__left{
-        &__logo{
-            height: 80px;
-            padding: 0;
-        }
-    }
-    &__right{
-        position: absolute;
-        right: 0;
 
-    }
 }
 

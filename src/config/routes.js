@@ -1,5 +1,5 @@
 /* components > Layouts > Pages > routes */
-import { LayoutGenreal } from "../layouts/LayoutGenreal";
+import { LayoutGenreal } from "../layouts/GeneralLayout/LayoutGenreal";
 import { Admin } from "../pages/admin/Admin";
 import { SignIn } from "../pages/admin/SignIn";
 import { Contact } from "../pages/Contact";
